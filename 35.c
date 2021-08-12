@@ -1,13 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[]) {
-  int i = 1000;
+int main (void){
 
-  while (i < 2000) {
-   printf("%d %d %d %d %d\n ", i, i++, i++, i++, i++);
-   i++;
+int n = 1000;
+int m = 1001;
+
+while (n < 2000) {
+  printf("%d ", n);
+  if (m % 5 == 0) {
+    printf("\n");
   }
+  n++;
+  m++;
+}
+printf("\n");
 
-  return 0;
+
+
+
+
+return 0;
 }
