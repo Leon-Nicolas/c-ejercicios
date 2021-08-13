@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdbool.h>
+#include <time.h>
 
 int main(int argc, char *argv[]) {
-  /* code */
   int a = atoi(argv[1]);
   int b = atoi(argv[2]);
-  int c = atoi(argv[3]);
-  if (a == b == c)
-    printf("verdadero\n");
-  else
-    printf("falso\n");
+
+  srand(time(NULL));
+  int c = rand ();
+  c = (c % (b - a + 1)) + a;
+  printf("c %% b: %d\n", c);
 
   return 0;
 }
