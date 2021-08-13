@@ -1,15 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
 
-int main (void){
+int main(void){
+
   srand(time(NULL));
-  int r = rand() % 8 + 1;
+  int n = rand() % 8 + 1;
 
-  if (r >= 6) {
+  if (n >= 6) {
     printf("6\n");
   }else{
-    printf("%d\n", r);
+    printf("%d\n", n);
   }
 
+  return 0;
 }
